@@ -7,39 +7,43 @@
 }
 .section_title-experience {
     padding-bottom: 40px;
-    margin-left: 7%;
+    margin-left: min(7%, 50px);
 }
 .section_title-experience::after {
     content: "";
     display: block;
     height: 1px;
-    width: 63%;
+    width: calc(100% - 300px);
     background-color: var(--clr-light);
     position: relative;
     top: -18px;
-    margin-left: 200px;
+    margin-left: 220px;
 }
 .section_experience-description {
     margin-bottom: 50px;
     display: flex;
+    justify-content: space-between;
 }
 .section_experience-description span {
     color: var(--clr-accent);
     font-weight: bold;
 }
 .experience-titles {
-    display: block;
-    margin-right: 3%;
-    margin-left: 5%;
-    margin-top: 40px;
+    flex: 1;
+    width: 15%;
+    padding-right: 10px;
     text-align: right;
+    align-self: center;
+}
+.experience-titles h4, .experience-titles p {
+    margin: 0;
 }
 .experience-titles h3, .experience-titles h4 {
-    margin-bottom: -10px;
+    margin-bottom: 5px;
     color: var(--clr-dark);
 }
 .experience-titles h3 {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
 }
 .experience-titles h4 {
     font-size: 1rem;
@@ -47,18 +51,18 @@
 }
 .experience-titles p {
     font-family: var(--ff-code);
-    font-size: 1.05rem;
+    font-size: 1rem;
 }
 .experience-technologies {
-    margin-left: 3%;
-    margin-right: 3%;
-    display: block;
-    margin-top: 1.5%;
+    flex: 1;
+    width: 15%;
+    padding-left: 10px;
+    align-self: center;
 }
 .experience-technologies p {
-    margin-bottom: -12px;
     font-family: var(--ff-code);
     font-size: 1rem;
+    margin: 0;
 }
 .experience-technologies p a {
     color: inherit;
@@ -68,10 +72,9 @@
     color: var(--clr-accent);
 }
 .experience-technologies i {
-    margin-top: 20px;
+    margin-top: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
-    margin-bottom: 10px;
     font-size: 18px;
     color: var(--clr-light);
 }
@@ -79,84 +82,67 @@
     color: var(--clr-accent);
 }
 .experience-description {
-    max-width: 550px;
+    flex: 4;
+    max-width: 600px;
     background-color: var(--clr-textbox);
     border-radius: 5px;
     padding: 15px 20px;
+    margin: 0 10px;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, .5);
 }
-.experience-robotics {
-    margin-left: -80px;
-}
-.experience-lp {
-    margin-left: -40px;
+
+@media (max-width: 1024px) {
+    .experience-titles {
+        width: 20%;
+    }
+    .experience-technologies {
+        width: 20%;
+    }
 }
 
-@media (max-width: 1250px) {
-    .section_title-experience {
-        margin-left: 10%;
-    }
-    .section_title-experience::after {
-        width: 60%;
-    }
-}
-@media (max-width: 1100px) {
-    .section_title-experience::after {
-        width: 57%;
-    }
-}
-@media (max-width: 950px) {
-    .section_title-experience::after {
-        width: 52%;
-    }
-    .section_title-experience {
-        margin-left: 10%;
-    }
-}
 @media (max-width: 750px) {
     .section_title-experience {
-        margin-left: 7%;
+        margin-left: 5%;
     }
     .section_title-experience::after {
-        width: 52%;
+        width: calc(100% - 250px);
         margin-left: 170px;
-    }
-    .experience-robotics {
-        margin-left: -14px;
-    }
-    .experience-lp {
-        margin-left: 0px;
-    }
-}
-@media (max-width: 700px) {
-    .section_title-experience::after {
-        width: 45%;
-    }
-    .section_title-experience {
-        padding-bottom: 0px;
+        margin-top: 3px;
     }
     .section_experience-description {
         margin-bottom: 50px;
         display: block;
     }
+    .experience-titles {
+        width: 100%;
+        text-align: right;
+        justify-content: end;
+        margin-bottom: 10px;
+    }
     .experience-technologies {
         display: flex;
+        width: 80%;
+        justify-content: space-between;
+        margin: 0 auto;
     }
-    .experience-technologies p, .experience-technologies i{
-        margin-left: 10px;
-    }
-    .experience-technologies i{
+    .experience-technologies p {
         margin-top: 10px;
     }
-    .experience {
-        padding-bottom: 0px;
+    .experience-technologies i {
+        margin-top: 8px;
     }
-    .experience-robotics {
-        margin-left: -0px;
+    .experience {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+@media (max-width: 700px) {
+    .experience {
+        width: 80%;
     }
 }
 @media (max-width: 550px) {
     .section_title-experience::after {
-        width: 38%;
+        width: calc(100% - 200px);
     }
 }
