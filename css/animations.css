@@ -37,10 +37,10 @@
     transition: opacity 600ms ease-in;
     transition-delay: 1500ms;
 }
-.fade-in-up{
-    transition: transform 400ms ease-in;
-    transform: translateY(20px);
-}
-.fade-in-up.appear {
-    transform: translateY(0);
-}
+/*.fade-in-up{*/
+/*    transition: transform 400ms ease-in;*/
+/*    transform: translateY(20px);*/
+/*}*/
+/*.fade-in-up.appear {*/
+/*    transform: translateY(0);*/
+/*}*/

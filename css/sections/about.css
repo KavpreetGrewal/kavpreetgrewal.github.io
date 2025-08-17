@@ -22,8 +22,8 @@
     border-radius: 5px;
 }
 .about-me_description {
-    width: 50%;
-    max-width: 500px;
+    width: 100%;
+    /*max-width: 500px;*/
     background-color: var(--clr-textbox);
     padding: 5px 20px;
     color: var(--clr-light);
